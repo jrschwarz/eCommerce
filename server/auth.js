@@ -1,3 +1,6 @@
+var prodDomain = 'https://sheltered-hollows-25666.herokuapp.com';
+var devDomain = prodDomain + ''
+
 function setupAuth(User, Config, app) {
   var passport = require('passport');
   var FacebookStrategy = require('passport-facebook').Strategy;
@@ -18,7 +21,7 @@ function setupAuth(User, Config, app) {
     {
       clientID: Config.facebookClientId,
       clientSecret: Config.facebookClientSecret,
-      callbackURL: 'http://localhost:3000/auth/facebook/callback',
+      callbackURL: prodDomain + '/auth/facebook/callback',
       profileFields: ['id', 'email', 'gender', 'link', 'locale', 'name', 'timezone', 'updated_time', 'verified']
     },
     function(accessToken, refreshToken, profile, done) {
@@ -56,13 +59,13 @@ function setupAuth(User, Config, app) {
       passport.authenticate('facebook',
         {
           scope: ['email'],
-          callbackURL: 'http://localhost:3000/auth/facebook/callback?redirect=' + redirect
+          callbackURL: prodDomain + '/auth/facebook/callback?redirect=' + redirect
         })(req, res, next);
     });
 
   app.get('/auth/facebook/callback',
     function(req, res, next) {
-      var url = 'http://localhost:3000/auth/facebook/callback?redirect=' +
+      var url = prodDomain + '/auth/facebook/callback?redirect=' +
         encodeURIComponent(req.query.redirect);
       passport.authenticate('facebook', { callbackURL: url })(req, res, next);
     },
