@@ -1,0 +1,59 @@
+<div class="checkout-wrapper">
+  <h2>Checkout</h2>
+  <hr style="margin-bottom: 40px;">
+  <div  ng-repeat="item in user.user.data.cart"
+        class="checkout-product">
+    <i class="fa fa-times text-danger" style="float:right; opacity: 0.5; cursor: pointer;" ng-click="remove(item, $index)"></i>
+    <div class="image-left">
+      <img ng-src="{{item.product.pictures[0]}}">
+    </div>
+    <div>
+      <div class="name" style="padding: 0 20px 10px 0;">
+        {{item.product.name}}
+      </div>
+      <div class="price">
+        {{item.product.displayPrice}}
+      </div>
+      <div class="quantity" style="margin-top: 20px;">
+        Quantity:
+        <input type="number" ng-model="item.quantity" min="1" max="100" step="1">
+      </div>
+    </div>
+    <hr>
+    <div style="clear: both"></div>
+  </div>
+  <button class="btn btn-lrg btn-primary" ng-click="updateCart()">
+    Update Cart
+  </button>
+  <div class="checkout">
+    <h2>
+      <i class="fa fa-credit-card"></i>
+      Payment
+    </h2>
+    <form class="form" style="margin-bottom: 20px;">
+        <div class="form-group">
+          <input type="text" ng-model="stripeToken.number" placeholder="Card Number" class="form-control"/>
+        </div>
+        <div class="form-group row">
+          <div class="col-xs-3 col-sm-2">
+            <input type="text" ng-model="stripeToken.exp_month" placeholder="Month" class="form-control">
+          </div>
+          <div class="col-xs-3 col-sm-3">
+            <input type="text" ng-model="stripeToken.exp_year" placeholder="Year" class="form-control">
+          </div>
+          <div class="col-xs-6 col-sm-3">
+            <input type="password" ng-model="stripeToken.cvc" placeholder="CVC" class="form-control"/>
+          </div>
+        </div>
+    </form>
+    <button class="btn btn-lrg btn-success" ng-click="checkout()" style="margin-bottom: 20px;">
+      Check Out
+    </button>
+    <div class="checkout-error" ng-show="error">
+      {{error}}
+    </div>
+    <div class="checkout-success" ng-show="checkedOut">
+      Checked out successfully!
+    </div>
+  </div>
+</div>
