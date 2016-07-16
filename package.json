@@ -1,4 +1,9 @@
 {
+  "name": "MEAN Retail",
+  "version": "1.0.0",
+  "description": "eCommerce application",
+  "main": "index.js",
+  "author": "Joseph Schwarz",
   "engines": {
 		"node": "5.1.x",
 		"npm": "3.3.x"
