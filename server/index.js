@@ -21,4 +21,4 @@ app.use(express.static('public', { maxAge: 4 * 60 * 60 * 1000 /* 2hrs */ }));
 //app.listen(3000);
 var port = process.env.PORT || 80;
 app.listen(port);
-console.log('Listening on port 3000!');
+console.log('Listening on port ' + port + '!');
