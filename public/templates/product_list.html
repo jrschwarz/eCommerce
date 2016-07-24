@@ -1,5 +1,6 @@
 <div class="phone-section">
   <h3>Phones</h3>
+  <a href="/#/category/Phones" class="text-right" style="float: right; margin-top: -20px; padding-right: 30px;">More</a>
   <hr>
   <div class="singleProduct text-center col-sm-3 col-xs-6" ng-repeat="product in products | filter: { category: { _id: 'Phones'}} | limitTo: 8">
     <div class="pImage">
@@ -19,8 +20,11 @@
   </div>
 </div>
 
+<div class="clearfix"></div>
+
 <div class="nonfiction-section">
   <h3>CookBooks</h3>
+  <a href="/#/category/Cookbooks" class="text-right" style="float: right; margin-top: -20px; padding-right: 30px;">More</a>
   <hr>
   <div class="singleProduct text-center col-sm-3 col-xs-6" ng-repeat="product in products | filter: { category: { _id: 'CookBooks'}} | limitTo: 8">
     <div class="pImage">

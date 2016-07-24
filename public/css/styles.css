@@ -6,6 +6,33 @@ body > .container {
 	margin-top: 100px;
 }
 
+.product-details .cart-button {
+	position: relative;
+	margin-top: 60px;
+	left: 0;
+}
+
+.crumbs {
+	border-color: #ddd;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 300;
+}
+
+.caret {
+	display: none;
+}
+
+.dropdown-menu {
+	left: -54px;
+	top: 108%;
+}
+
+.category-tree-wrapper .child-select {
+	z-index: 9999;
+}
+
 .cart-button {
 	position: absolute;
 	bottom: 20px;
@@ -44,8 +71,8 @@ body > .container {
 
 .navbar .user img {
 	border-radius: 10px;
-	max-width: 70%;
-	margin-top: 3px;
+	max-width: 80%;
+	margin-top: 6px;
 }
 
 .navbar-default .navbar-brand, .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
@@ -55,7 +82,7 @@ body > .container {
 }
 
 .navbar-brand img {
-	width: 15%;
+	width: 26%;
 	margin-top: -10px;
 }
 

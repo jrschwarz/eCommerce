@@ -42,7 +42,7 @@ exports.AddToCartController = function($scope, $http, $user, $timeout) {
           }, 5000);
         });
     } else {
-      toastr.error("Please login before adding to your cart.");
+      alert("Please login before adding to your cart.");
     }
   };
 };

@@ -9,15 +9,14 @@
       </div>
     </div>
   </div>
-  <div class="product-details-content">
-    <div class="image-left">
-      <img ng-src="{{product.pictures[0]}}" />
+  <div class="row">
+    <div class="text-left col-xs-12 col-sm-5" style="margin-top: 30px">
+      <img ng-src="{{product.pictures[0]}}" style="width: 280px;">
     </div>
-    <div class="details-right">
+    <div class="col-xs-12 col-sm-7">
       <h1>{{product.name}}</h1>
-      <div>{{product.displayPrice}}</div>
+      <div style="font-size: 1.4em; padding-left: 5px;">{{product.displayPrice}}</div>
       <add-to-cart></add-to-cart>
     </div>
-    <div style="clear: both"></div>
   </div>
 </div>

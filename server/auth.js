@@ -1,5 +1,5 @@
-var domain = 'https://sheltered-hollows-25666.herokuapp.com';
-//var domain = 'http://localhost:3000';
+//var domain = 'https://sheltered-hollows-25666.herokuapp.com';
+var domain = 'http://localhost:3000';
 
 function setupAuth(User, Config, app) {
   var passport = require('passport');

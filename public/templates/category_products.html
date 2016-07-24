@@ -9,19 +9,24 @@
     </span>
   </div>
   <div style="clear: both"></div>
-  <div class="product" ng-repeat="product in products">
-    <div class="product-image">
-      <img ng-src="{{product.pictures[0]}}" />
-    </div>
-    <div class="product-name">
+  <div class="singleProduct text-center col-sm-3 col-xs-6" ng-repeat="product in products" style="margin-top: 30px;">
+    <div class="pImage">
       <a ng-href="#/product/{{product._id}}">
-        {{product.name}}
+        <img ng-src="{{product.pictures[0]}}">
       </a>
     </div>
-    <div class="product-cost">
-      {{product.displayPrice}}
+    <div class="pName">
+        <a ng-href="#/product/{{product._id}}">
+          {{product.name}}
+        </a>
+    </div>
+    <div class="pPrice">
+    {{product.displayPrice}}
     </div>
     <add-to-cart></add-to-cart>
+  </div>
+  <div ng-show="products.length==0" class="text-center" style="margin-top: 30px;">
+    <h3>Coming Soon!</h3>
   </div>
   <div style="clear: both"></div>
 </div>

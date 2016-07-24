@@ -1,7 +1,7 @@
 {
   "devDependencies": {
     "browserify": "10.2.3",
-    "gulp": "3.8.11",
+    "gulp": "3.9.1",
     "gulp-browserify": "0.5.1",
     "karma": "0.12.16",
     "karma-chai": "0.1.0",

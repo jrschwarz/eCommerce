@@ -18,7 +18,8 @@ app.use('/api/v1', require('./api')(wagner));
 // file.
 app.use(express.static('public', { maxAge: 4 * 60 * 60 * 1000 /* 2hrs */ }));
 
-//app.listen(3000);
-var port = process.env.PORT || 80;
+
+//var port = process.env.PORT || 80;
+var port = 3000;
 app.listen(port);
 console.log('Listening on port ' + port + '!');

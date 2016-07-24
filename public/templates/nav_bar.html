@@ -1,26 +1,43 @@
 <div class="navbar navbar-default navbar-fixed-top">
   <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+    <div class="navbar-header" style="float: left; max-width: 177px;">
+      <!-- <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
-      </button>
+      </button> -->
       <a class="navbar-brand" href="#/">
         <span><img src="/img/mean-retail-logo.png" /></span>
         MEAN Retail
       </a>
     </div>
+    <table style="float: right; margin-right: -12px;">
+      <tr>
+        <td class="checkout" ng-show="user.user">
+          <a ng-href="#/checkout" style="padding: 10px 12px 0 0;">
+            <i class="fa fa-shopping-cart"></i>
+          </a>
+        </td>
+        <td class="dropdown user" ng-show="user.user">
+          <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" style="padding: 0 0 4px 0;">
+            <img ng-src="{{user.user.profile.picture}}" /> <span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            <li><button class="btn btn-primary btn-block" ng-click="logout()">Logout</button></li>
+          </ul>
+        </td>
+        <td class="login fb-login" ng-show="!user.user">
+          <a href="/auth/facebook" style="padding: 0;">
+            <img src="//i.stack.imgur.com/LKMP7.png">
+          </a>
+        </td>
+    </tr>
+  </table>
 
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <form class="navbar-form navbar-left" role="search">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search">
-        </div>
-      </form>
+    <div class="" id="bs-example-navbar-collapse-1">
 
-      <ul class="nav navbar-nav navbar-right">
+      <!-- <ul class="nav navbar-nav navbar-right">
         <li class="checkout" ng-show="user.user">
           <a ng-href="#/checkout" style="padding: 10px 15px 0 0;">
             <i class="fa fa-shopping-cart"></i>
@@ -39,7 +56,7 @@
             <img src="//i.stack.imgur.com/LKMP7.png">
           </a>
         </li>
-      </ul>
+      </ul> -->
     </div><!-- /.navbar-collapse -->
   </div>
 </div>
